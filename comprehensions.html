@@ -41,16 +41,18 @@ body{counter-reset:h1 3}
 
 <aside>There is always a current working directory.<br>현재 작업 디렉토리는 언제나 있다.</aside>
 
-<p>If you don&#8217;t know about the current working directory, step 1 will probably fail with an <code>ImportError</code>. Why? Because Python will look for the example module in <a href=your-first-python-program.html#importsearchpath>the import search path</a>, but it won&#8217;t find it because the <code>examples</code> folder isn&#8217;t one of the directories in the search path. To get past this, you can do one of two things:
+<p>If you don&#8217;t know about the current working directory, step 1 will probably fail with an <code>ImportError</code>. Why? Because Python will look for the example module in <a href=your-first-python-program.html#importsearchpath>the import search path</a>, but it won&#8217;t find it because the <code>examples</code> folder isn&#8217;t one of the directories in the search path. To get past this, you can do one of two things:<br>
+  현재 작업 폴더를 모른다면 첫 단계는 아마 <code>ImportError</code> 로 실패할 것이다. 왜냐하면 파이썬은 해당 예제 모듈을 <a href=your-first-python-program.html#importsearchpath>import 탐색 경로</a>에서 찾으려 할 것이기 때문이다. 이를 해결하려면, 두가지 가운데 한가지를 해야 한다:
 
 <ol>
-<li>Add the <code>examples</code> folder to the import search path
-<li>Change the current working directory to the <code>examples</code> folder
+<li>Add the <code>examples</code> folder to the import search path<br>해당 <code>examples</code> 폴더를 import 검색 경로에 추가
+<li>Change the current working directory to the <code>examples</code> folder<br>현재 작업 폴더를 해당 <code>examples</code> 폴더로 변경
 </ol>
 
-<p>The current working directory is an invisible property that Python holds in memory at all times. There is always a current working directory, whether you&#8217;re in the Python Shell, running your own Python script from the command line, or running a Python <abbr>CGI</abbr> script on a web server somewhere.
+<p>The current working directory is an invisible property that Python holds in memory at all times. There is always a current working directory, whether you&#8217;re in the Python Shell, running your own Python script from the command line, or running a Python <abbr>CGI</abbr> script on a web server somewhere.<br>
+  현 작업 폴더는 보이지 않는 속성으로 파이썬이 메모리에 항상 담아둔다. 현재 작업 디렉토리는 언제나 있다; 파이썬 셸 안에 있어도, 명령행으로부터 자신의 파이썬 스크립트를 실행할 때도, 또는 파이썬 <abbr>CGI</abbr>를 어떤 웹서버에서 실행할 때도.
 
-<p>The <code>os</code> module contains two functions to deal with the current working directory.
+<p>The <code>os</code> module contains two functions to deal with the current working directory.<br>해당 <code>os</code> 모듈은 현 작업 디렉토리를 다루기 위해 두 함수를 내장한다.
 
 <pre class=screen>
 <a><samp class=p>>>> </samp><kbd class=pp>import os</kbd>                                            <span class=u>&#x2460;</span></a>
